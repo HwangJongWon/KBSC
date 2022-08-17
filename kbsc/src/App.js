@@ -6,6 +6,7 @@ import ToText from "./screens/ToText"
 import SignUp from "./screens/SignUp"
 import SignIn from "./screens/SignIn"
 import NavBarElements from "./components/Navbar/NavBarElements";
+import Parallax from "./components/Parallas";
 
 function App() {
   return (

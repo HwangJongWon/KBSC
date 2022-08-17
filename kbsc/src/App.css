@@ -35,3 +35,12 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "fac";
+  src: url(./fonts/강원교육튼튼.ttf);
+}
+
+.fonts {
+  font-family: "fac";
+}

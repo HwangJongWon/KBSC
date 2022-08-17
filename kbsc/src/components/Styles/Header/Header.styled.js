@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const Header = styled.section`
@@ -23,7 +22,7 @@ export const Header = styled.section`
         transform : scaleX(1.5);
         background-position: right top;
         background-size:100vw 200px;
-        background-color:#282c34;
+        background-color:#ebebeb;
     }
 `
 
@@ -33,5 +32,9 @@ export const MainHeader = styled.div`
     margin: 0 auto;
     max-width: 500px;
     background-color: transparent;
+    font-family: "Arial Black", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
 `
 

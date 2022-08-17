@@ -1,12 +1,22 @@
 import React from 'react'
 import { Header, MainHeader } from '../components/Styles/Header/Header.styled'
 import { Container } from '../components/Styles/Container/Container.style'
+import Link from '@mui/material/Link';
+
 const Home = () => {
   return (
     <Container>
       <Header>
         <MainHeader>
-          <h1>Home</h1>
+        <div className="fonts">
+        <Link href="/FromText" >
+          {"from text to 수어"}
+        </Link>
+        <p></p>
+        <Link href="/ToText" >
+          {"from 수어 to text"}
+        </Link>
+        </div>
         </MainHeader>
       </Header>
     </Container>
