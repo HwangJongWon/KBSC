@@ -6,7 +6,8 @@ import ToText from "./screens/ToText"
 import SignUp from "./screens/SignUp"
 import SignIn from "./screens/SignIn"
 import NavBarElements from "./components/Navbar/NavBarElements";
-import Parallax from "./components/Parallas";
+import Learn from './screens/Learn';
+
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <NavBarElements />
       <Routes>
         <Route path = "/" element = {<Home/>} />
-        <Route path = "/Fromtext " element = {<FromText/>} />
+        <Route path = "/FromText" element = {<FromText/>} />
         <Route path = "/ToText" element = {<ToText/>} />
         <Route path = "/SignIn" element = {<SignIn/>} />
         <Route path = "/SignUp" element = {<SignUp/>} />
+        <Route path = "/Learn" element = {<Learn/>} />
       </Routes>
     </Router>
   );

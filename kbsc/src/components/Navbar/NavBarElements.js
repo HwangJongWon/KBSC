@@ -4,7 +4,7 @@ import {Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 
 const NavBarElements = () =>{
     return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style = {{fontfamily:"main"}}>
       <Container>
         <Navbar.Brand href="/">logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
