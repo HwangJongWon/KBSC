@@ -8,6 +8,7 @@ export const Header = styled.section`
     justify-content: center;
     overflow: hidden;
     align-items:center;
+    font-family:'fac';
     &::before {
         content :'';
         position: absolute;
