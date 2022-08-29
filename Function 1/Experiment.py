@@ -8,6 +8,8 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 import chromedriver_autoinstaller
+import urllib.request
+import cv2 as cv
 
 def crawl():
     options = webdriver.ChromeOptions()
@@ -31,25 +33,34 @@ def crawl():
     driver.implicitly_wait(10) 
 
     # 번역 버튼이 눌리면 텍스트 값을 받아 들여야 함.
-    # 번역 버튼이 눌리면 텍스트를 전다 받아야 함.
+    # 번역 버튼이 눌리면 텍스트를 전달 받아야 함.
 
-    text = "안녕하세요"
+    text = "쌀밥"
     input = driver.find_element_by_class_name('n_input')
     input.send_keys(text)
 
     search=driver.find_element_by_class_name('n_btn_search')
     search.click()
 
-    onevideo=driver.find_element_by_class_name('hand_btn_play')
-    explanation=driver.find_element_by_class_name('tit')
-    explanation1=explanation.find_element_by_tag_name('a')
-    gettext=explanation1.text
-    print(" text : ",gettext)
-    print(type(gettext))
-    print(gettext[0:10])
+    onevideo=driver.find_element_by_class_name('hand_btn_play').click()
 
-    time.sleep(5)
 
+    dl=driver.find_element_by_class_name('content_view_dis')
+
+    dd1=dl.find_element_by_tag_name('dd')
+    for i in range(2):
+        image=dd1.find_element_by_class_name('example')
+        image1=dd1.find_element_by_tag_name('a')
+        print("image : ",image)
+        print("image1 : ",image1)
+        print("type : ",type(image))
+        print("type : ",type(image1))
+        img
+
+    print("완료")
     print("머지")
+    driver.close()
+    driver.quit()
+
 crawl()
 print("실행완료")

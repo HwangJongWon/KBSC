@@ -126,7 +126,7 @@ with mp_hands.Hands(
             else:
                 sentence += " "
                 sentence += i
-            
+
         draw.text(xy=(20, 440), text = sentence, font=font, fill=(255, 255, 255))
         #영상에 한글 텍스트 입력
 
