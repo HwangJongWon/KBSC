@@ -7,12 +7,22 @@
     {
       "text": "ㅎㅇ",
       "id": 2
+    },
+    {
+      "text": "안녕하세요",
+      "id": 3
     }
   ],
-  "guest": [
+  "wordList": [
+    {
+      "id": 1,
+      "word": "bye",
+      "text": "잘가"
+    },
     {
       "id": 2,
-      "text": "bye"
+      "word": "HI",
+      "text": "안녕"
     }
   ]
 }
