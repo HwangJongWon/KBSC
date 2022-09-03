@@ -1,3 +1,4 @@
+
 import React from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -8,16 +9,17 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-
+import AuthenticationService from '../AuthenticationService';
 const SignIn = () => {
 
   const handleSubmit = (event) => {
-    //window.location.href="/"
+    window.location.href="/"
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const email=data.get('email');
     const password = data.get('password')
     console.log(email, password);
+    AuthenticationService.executeJwtAuthenticationService(email,password);
   };
 
   return (
@@ -70,5 +72,7 @@ const SignIn = () => {
     </Container>
   );
 }
+
+
 
 export default SignIn
