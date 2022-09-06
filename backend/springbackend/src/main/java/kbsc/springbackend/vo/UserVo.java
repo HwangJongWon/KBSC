@@ -9,8 +9,10 @@ import java.util.Collection;
 import java.util.Collections;
 
 @Data
+
 public class UserVo implements UserDetails{ //회원가입시 저장할 유저 정보 객체
     private int userNo;
+
     private String userId;
     private String userPw;
     private String userName;
@@ -30,9 +32,9 @@ public class UserVo implements UserDetails{ //회원가입시 저장할 유저 �
     public String getPassword(){
         return this.userPw;
     }
+
     //시큐리티의 userName
     // -> 따라서 얘는 인증할 때 id를 봄
-
     @Override
     public String getUsername(){
         return this.userId;

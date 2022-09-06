@@ -11,8 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @CrossOrigin(origins = "*", maxAge = 3600) // CORS해결하기위한 Annotation
-@RestController
+//@RestController
+@Controller
 @RequiredArgsConstructor //생성자 자동생성
 //@RequestMapping("/users")
 public class UserController {
@@ -31,26 +34,42 @@ public class UserController {
 //    }
 
 //    @GetMapping("/{userId}") //로그인
-    @GetMapping
-    public UserVo fetchUserByID(@PathVariable String userId){
-        System.out.println(userMapper.fetchUserByID(userId));
-        UserVo fetchUser = userMapper.fetchUserByID(userId);
-        return fetchUser;
-    }
-
-//    @PostMapping("/users")
-//    void insertUser(@RequestBody UserVo user){
-//        userMapper.insertUser(user);
-//        userService.joinUser(user);
-//
-//        System.out.println("유저 회원가입 성공");
+//    @GetMapping("/users/signin")
+//    public UserVo fetchUserByID(@PathVariable String userId){
+//        System.out.println(userMapper.fetchUserByID(userId));
+//        UserVo fetchUser = userMapper.fetchUserByID(userId);
+//        return fetchUser;
 //    }
 
-    @PostMapping("/users")
+    /*
+    로그인폼
+    @return
+     */
+//    @PostMapping("/users/login_proc")  //  로그인
+//    public String login(@RequestBody UserVo userVo, Model model){
+//        String userId = userVo.getUserId();
+//        String userPw = userVo.getUserPw();
+//        model.addAttribute("userId", userId);
+//        model.addAttribute("userPw", userPw);
+//        System.out.println("로그인성공");
+//        return "login_proc";
+//    }
+
+
+    @PostMapping(value = "/users/login_proc")  //  로그인
+    public String login(@RequestParam Map map){
+        System.out.println(("map= " + map));
+        return "login_proc";
+    }
+
+
+
+    @PostMapping("/users") // 회원가입
     public String signUp(@RequestBody UserVo userVo){
         userService.joinUser(userVo);
         userMapper.insertUser(userVo);
-        return "redirect:/login"; //로그인 구현예정
+        System.out.println("회원가입 성공");
+        return "redirect:/login";
     }
 
 //  스프링 시큐리티 회원가입 , 로그인 기능
@@ -93,17 +112,17 @@ public class UserController {
 //        return "redirect:/login"; //로그인 구현예정
 //    }
 //
-//    /*
-//    유저페이지
-//    @param model
-//    @param authentication
-//    @return
-//     */
-//    @GetMapping("/user_access")
-//    public String userAccess(Model model, Authentication authentication){
-//        //Authentication 객체를 통해 유저 정보를 가져올 수 있다.
-//        UserVo userVo = (UserVo) authentication.getPrincipal(); //userDetail객체를 가져옴
-//        model.addAttribute("info", userVo.getUserId() + "의"+ userVo.getUsername()+ "님");
-//        return "user_access";
-//    }
+    /*
+    유저페이지
+    @param model
+    @param authentication
+    @return
+     */
+    @GetMapping("/user_access")
+    public String userAccess(Model model, Authentication authentication){
+        //Authentication 객체를 통해 유저 정보를 가져올 수 있다.
+        UserVo userVo = (UserVo) authentication.getPrincipal(); //userDetail객체를 가져옴
+        model.addAttribute("info", userVo.getUserId() + "의"+ userVo.getUsername()+ "님");
+        return "user_access";
+    }
 }
