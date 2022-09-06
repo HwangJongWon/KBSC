@@ -34,6 +34,7 @@ public class UserService implements UserDetailsService{ //DAO를 호출하는 Se
         userVo.setAppendDate(localTime);
         userVo.setAppendDate(localTime);
         //userMapper.insertUser(userVo);
+        //userMapper.insertUser(userVo);
     }
 
     @Override
