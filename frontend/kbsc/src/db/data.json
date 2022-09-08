@@ -11,18 +11,24 @@
     {
       "text": "안녕하세요",
       "id": 3
+    },
+    {
+      "text": "잘가",
+      "id": 4
     }
   ],
   "wordList": [
     {
       "id": 1,
       "word": "bye",
-      "text": "잘가"
+      "text": "잘가",
+      "src": "images/수화.jpg"
     },
     {
       "id": 2,
       "word": "HI",
-      "text": "안녕"
+      "text": "안녕",
+      "src": "images/수화Img2.jpg"
     }
   ]
 }

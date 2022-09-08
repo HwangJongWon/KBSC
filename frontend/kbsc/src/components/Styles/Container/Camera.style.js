@@ -15,9 +15,14 @@ export const Text = styled.div`
     margin-left: 20%;
     margin-right: 20%;
     width: 60%;
-    height: 10%;
+    height: 50%;
     border: 3px solid LightSteelBlue;
     font-family:"fac";
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;
+
+    img {
+        width:50%;
+        height:50%;
+    }
 `
