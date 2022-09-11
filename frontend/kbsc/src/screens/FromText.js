@@ -13,7 +13,7 @@ const textRef = useRef(null);
 
 
 function update(){
-  fetch(`http://localhost:3001/text`,{
+  fetch(`http://localhost:3000/text`,{
     method:'POST',
     headers:{
       'Content-Type' : 'application/json'
@@ -27,12 +27,13 @@ function update(){
       alert('생성이 완료되었습니다.')
     }
   })
+
 }
 
 const [words, setWords] = useState([]);
 
 useEffect(() => {
-  fetch("http://localhost:3001/wordList")
+  fetch("http://localhost:3000/wordList")
     .then(res=>{
       return res.json();
     })
@@ -65,13 +66,13 @@ return (
     </Box>
     </Header>
     <Text>
-    {words.map(word => (
-      <li key={word.id}>
+    {words.map((word) => (
         <div className='word'>
-          {word.word} : {word.text}
+          {word.id} . {word.word} : {word.text}
+          <img src = {word.src}/>
         </div>
-      </li>
     ))}
+
     </Text>
   </Container>
 )}
