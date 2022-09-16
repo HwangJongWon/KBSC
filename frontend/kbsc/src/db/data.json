@@ -1,0 +1,51 @@
+{"wordList": [
+  {
+    "id": 1,
+    "word": "안녕",
+    "text": "두 주먹을 쥐고 바닥이 아래로 향하게 하여 가슴 앞에서 아래로 내린다.",
+    "src": "images/image1.jpg",
+    
+    "src3": "images/video1.mp4"
+  },
+  {
+    "id": 2,
+    "word": "너",
+    "text": "오른 주먹의 1지를 펴서 끝이 밖으로 향하게 하여 약간 내민다.",
+    "src": "images/image2.jpg",
+    
+    "src3": "images/video2.mp4"
+  },
+  {
+    "id": 3,
+    "word": "오늘",
+    "text": "두 손을 펴서 손등이 위로 손끝이 밖으로 향하게 하여 가슴 앞에서 약간 아래로 내린다.",
+    "src": "images/image3.jpg",
+    
+    "src3": "images/video3.mp4"
+  },
+  {
+    "id": 4,
+    "word": "옷",
+    "text": "오른 주먹의 1·5지를 펴서 끝으로 오른쪽 가슴 앞의 옷을 살짝 잡아 흔든다.",
+    "src": "images/image4.jpg",
+    
+    "src3": "images/video4.mp4"
+  },
+  {
+    "id": 5,
+    "word": "정말",
+    "text": "5지를 접고 나머지 손가락을 펴서 손바닥이 왼쪽으로 향하게 세운 오른손의 1지 옆면을 턱 중앙에 댄다.",
+    "src": "images/image5.jpg",
+    
+    "src3": "images/video5.mp4"
+  },
+  {
+    "id": 6,
+    "word": "예쁘다",
+    "text": "오른 주먹의 1지를 펴서 끝을 오른쪽 보조개에 대고 살짝 돌려 손등이 밖으로 향하게 한다.",
+    "src": "images/image6.jpg",
+    
+    "src3": "images/video6.mp4"
+  }
+  
+]}
