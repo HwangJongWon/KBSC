@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -32,17 +33,23 @@ public class UserService implements UserDetailsService{ //DAO를 호출하는 Se
         userVo.setUserAuth("USER");
         userVo.setAppendDate(localTime);
         userVo.setAppendDate(localTime);
-        userMapper.insertUser(userVo);
+        //userMapper.insertUser(userVo);
+        //userMapper.insertUser(userVo);
     }
 
     @Override
     public UserVo loadUserByUsername(String userId) throws UsernameNotFoundException{
         //여기서 받은 유저 패스워드와 비교하여 로그인 인증
-        UserVo userVo = userMapper.fetchUserByID(userId);
+
+        UserVo userVo = userMapper.getUserAccount(userId);
+
+
         if(userVo == null){
             throw new UsernameNotFoundException("User not authorized.");
         }
+        System.out.println("여긴 loadUserByUsername입니다");
         return userVo;
+
     }
 
 }
